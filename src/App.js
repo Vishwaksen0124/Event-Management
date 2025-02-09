@@ -27,7 +27,7 @@ const App = () => {
 
     useEffect(() => {
         if (isAuthenticated) {
-            axios.get('http://localhost:5000/api/events')
+            axios.get('https://eventmanager-l1t7.onrender.com/api/events')
                 .then(response => setEvents(response.data))
                 .catch(error => console.error(error));
         }
@@ -38,7 +38,7 @@ const App = () => {
     };
 
     const handleEventDelete = (id) => {
-        axios.delete(`http://localhost:5000/api/events/${id}`)
+        axios.delete(`https://eventmanager-l1t7.onrender.com/api/events/${id}`)
             .then(() => setEvents(events.filter(event => event._id !== id)))
             .catch(error => console.error(error));
     };

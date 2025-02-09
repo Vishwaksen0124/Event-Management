@@ -21,7 +21,7 @@ const EventForm = ({ onEventAdd }) => {
             return;
         }
 
-        axios.post('http://localhost:5000/api/events', newEvent, {
+        axios.post('https://eventmanager-l1t7.onrender.com/api/events', newEvent, {
             headers: { Authorization: `Bearer ${token}` }
         })
             .then(response => {
